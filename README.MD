@@ -14,7 +14,6 @@ process2(4502): 主要工作:接收xApp的資料作即時的推論
 將xApp傳來的資料寫入datalake、通知inference node有新模型
 
 
-
 ### build images
 ```bash=
 bash build.sh
