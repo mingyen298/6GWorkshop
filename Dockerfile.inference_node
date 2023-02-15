@@ -1,0 +1,16 @@
+
+FROM 6g-demo:inference
+
+WORKDIR /app
+RUN mkdir models
+
+ADD models/model /app/models/model
+ADD role/inference_node/main.py .
+ADD role/inference_node/run.sh .
+ADD role/inference_node/main .
+EXPOSE 4501 4502
+# CMD ["./main" ]
+
+
+CMD [ "bash","./run.sh" ]
+# CMD [ "python","main.py" ]
